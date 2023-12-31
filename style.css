@@ -1,0 +1,288 @@
+@import url("http://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113, 99, 186, 255);
+}
+
+.sidebar:hover {
+    width: 260px;
+    transition: 0.4s;
+}
+
+.logo {
+    height: 80px;
+    padding: 16px;
+
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+    background: #e0e0e058;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+
+.logout {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+}
+
+/* main body section*/
+.main--content {
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title {
+    color: rgba(113, 99, 186, 255)
+}
+
+.user--info {
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+
+.content--header {
+    font-size: 40px;
+    color: blue;
+    text-align: center;
+    text-shadow: aqua;
+}
+
+
+.content {
+
+    display: flex;
+
+}
+
+.content--info {
+    width: 950px;
+}
+
+.content--table {
+
+    margin-top: 20px;
+    margin-left: 370px;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: #7284f3;
+
+}
+
+.content--table tr {
+
+    height: 50px;
+    /* Add a solid black border with 1px width */
+
+
+}
+
+.content--table td {
+
+    width: 270px;
+    border: 2px solid blue;
+    background-color: #99c2f1;
+}
+
+.content--image {
+    width: 200px;
+    /* Set container width */
+    height: 200px;
+    /* Set container height */
+    overflow: hidden;
+    /* Clip the image to the container */
+    border-radius: 50%;
+    /* Create a circle shape */
+
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.content--image img {
+    width: 100%;
+    /* Make sure the image fills the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove extra space */
+    object-fit: cover;
+    /* Ensure the image covers the container */
+}
+
+/*leave.jsp page style*/
+
+.form--design {
+    width: 500px;
+    display: block;
+    margin: 20px auto;
+    padding: 25px 50px 25px;
+    background: rgba(164, 241, 222, 0.6);
+    border-radius: 10px;
+
+}
+
+
+.form--design label {
+    display: inline-block;
+    width: 100px;
+    /* Adjust label width as needed */
+    text-align: left;
+    /* Align label text to the left */
+    margin-right: 10px;
+    /* Add spacing between label and input */
+}
+
+
+
+.user--select {
+    display: inline-block;
+    width: 250px;
+    height: 35px;
+    padding: 6px 6px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 15px;
+    float: right;
+
+}
+
+#myInput {
+    width: 250px;
+    height: 35px;
+    margin-left: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.2s linear;
+    border: 1px solid #ccc;
+    float: right;
+}
+
+#myInput:hover {
+
+    background-color: #f0f0f0;
+    /* Change background color on hover */
+    border: 1px blue;
+    transition: 0.2s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.97);
+}
+
+.button--click {
+    display: inline-block;
+    width: 70%;
+    padding: 12px 0px;
+    background: #2b3990;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 70px;
+}
+
+.show--table {
+    margin-top: 50px;
+    margin-left: 240px;
+    width: 900px;
+    height: 242px;
+    overflow: auto;
+}
+
+.show--table--content {
+    border-collapse: collapse;
+    border-radius: 5px;
+
+}
+
+.show--table--content tr {
+    height: 33px;
+    text-align: center;
+
+}
+
+.show--table--content th {
+    width: 240px;
+    border: 2px solid black;
+    background-color: #7284f3;
+}
+
+.show--table--content td {
+    width: 240px;
+    border: 1px solid rgb(27, 7, 106);
+    background-color: #c8cffa;
+    border-collapse: collapse;
+}
