@@ -286,3 +286,19 @@ body {
     background-color: #c8cffa;
     border-collapse: collapse;
 }
+
+/*upload updates file css */
+
+.attendece--content {
+    height: 50px;
+    width: 800px;
+    background-color: #3a35be58;
+    margin-top: 20px;
+    margin-left: 250px;
+
+}
+
+.inputfile {
+    height: 50px;
+    border-radius: 10%;
+}
