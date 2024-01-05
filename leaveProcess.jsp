@@ -61,8 +61,7 @@
     <div class='main--content'>
         <div class="header--wrapper">
             <div class="header--title">
-                <span>Primary</span>
-                <h2>Dashboard</h2>
+                <h1>Leave Management System</h1>
             </div>
             <div class="user--info">
                 <img src="./images/emp.jpg" alt="">
