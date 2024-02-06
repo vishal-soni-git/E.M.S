@@ -28,8 +28,8 @@
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="leaveProcess.jsp"> </i>
+                <a href="leaveProcess.jsp">
+                    <i class="fas fa-bed"> </i>
                     <span>Leave Management</span>
                 </a>
             </li>
@@ -71,8 +71,17 @@
         <div class='content--header'>Upload Updates</div>
 
 
-        <div class="attendece--content">
-
+        <div>
+             <div class="attendece--content">
+              <form action="uploadpost" method="post" enctype="multipart/form-data">
+                 Upload Post:  <input type="file" name="post" id="file" required>
+                 Title: <input type="text" name="title">
+                 <Button >Upload</Button>
+              </form>
+             </div>
+             <div class='updated-post'>
+                hello
+             </div>
         </div>
     </div>
 

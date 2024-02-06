@@ -6,7 +6,7 @@ public class MysqlConnection {
 
     public static Connection getConnection() throws Exception {
         if (con == null) {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             // com.mysql.jdbc.Driver md = new com.mysql.jdbc.Driver();
             // DriverManager.registerDriver(md);
 

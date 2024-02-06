@@ -28,7 +28,7 @@ body {
 }
 
 .sidebar:hover {
-    width: 260px;
+    width: 270px;
     transition: 0.4s;
 }
 
@@ -295,10 +295,23 @@ body {
     background-color: #3a35be58;
     margin-top: 20px;
     margin-left: 250px;
+    border-radius: 5px;
+    text-align: center;
 
 }
 
 .inputfile {
     height: 50px;
     border-radius: 10%;
+}
+
+.updated-post {
+    height: auto;
+    width: 800px;
+    background-color: #3a35be58;
+    margin-top: 10px;
+    margin-left: 250px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: auto;
 }

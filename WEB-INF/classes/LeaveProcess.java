@@ -17,7 +17,7 @@ public class LeaveProcess extends HttpServlet {
         try {
 
             res.setContentType("text/html");
-         
+
             String id = req.getParameter("id");
             String type = req.getParameter("type");
 
@@ -33,26 +33,25 @@ public class LeaveProcess extends HttpServlet {
 
             con = MysqlConnection.getConnection();
 
-			 PreparedStatement p = con.prepareStatement("select MAX(requestid) from employeeleave");
-			 ResultSet rs=p.executeQuery();
-			  int val=0;
-			  if (rs.next()) {
+            PreparedStatement p = con.prepareStatement("select MAX(requestid) from employeeleave");
+            ResultSet rs = p.executeQuery();
+            int val = 0;
+            if (rs.next()) {
                 // Retrieve the maximum value from the result set
-                val=Integer.parseInt(rs.getString(1))+1;
-         
+                val = Integer.parseInt(rs.getString(1)) + 1;
+
             } else {
                 System.out.println("No data found.");
             }
 
-
             PreparedStatement ps = con.prepareStatement("insert into employeeleave values(?,?,?,?,?,?)");
-			String sval=String.valueOf(val);
-            ps.setString(1,sval);
+            String sval = String.valueOf(val);
+            ps.setString(1, sval);
             ps.setString(2, id);
             ps.setString(3, type);
             ps.setDate(4, sDate);
             ps.setDate(5, eDate);
-			ps.setString(6, null);
+            ps.setString(6, null);
 
             int i = ps.executeUpdate();
 
@@ -61,12 +60,12 @@ public class LeaveProcess extends HttpServlet {
             } else {
                 System.out.println("Zero");
             }
-                
+
             res.sendRedirect("leave.jsp");
 
         } catch (Exception e) {
             e.printStackTrace();
-        } 
+        }
 
     }
 
