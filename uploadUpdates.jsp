@@ -79,8 +79,26 @@
                  <Button >Upload</Button>
               </form>
              </div>
-             <div class='updated-post'>
-                hello
+             <div class="updated-post-main">
+                 <div class='updated-post'>
+                    hello
+                         <%@ page errorPage="error.jsp" %>
+                         <%@ include file="connection.jsp"%>
+                     <%
+                          String id=(String)session.getAttribute("id");
+                           PreparedStatement ps=con.prepareStatement("select * from uploadpost  ORDER BY id DESC");
+                           ResultSet rs=ps.executeQuery();//get data in result set
+                                while(rs.next())
+                                {
+                                byte[] imageData = rs.getBytes(3);
+    
+                     // Convert byte array to base64 string
+                     String base64Image = java.util.Base64.getEncoder().encodeToString(imageData);
+                     %>
+                     <img src="data:image/jpeg;base64, <%= base64Image %>" alt="Database Image">
+    
+                       <% } %>
+                 </div>
              </div>
         </div>
     </div>

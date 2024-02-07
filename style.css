@@ -305,13 +305,39 @@ body {
     border-radius: 10%;
 }
 
-.updated-post {
-    height: auto;
+.updated-post-main {
+
     width: 800px;
-    background-color: #3a35be58;
+    height: 500px;
+    background-color: rgba(58, 53, 190, 0.58);
     margin-top: 10px;
     margin-left: 250px;
     border-radius: 5px;
     text-align: center;
     overflow: auto;
+
+}
+
+.updated-post {
+    width: 400px;
+    height: auto;
+    background-color: rgba(156, 156, 212, 0.941);
+    margin-top: 10px;
+    margin-left: 220px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.updated-post img {
+    width: 70%;
+    /* Make sure the image fills the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove extra space */
+    object-fit: cover;
+    /* Ensure the image covers the container */
+    margin-top: 20px;
+    margin-left: 60px;
+    border-radius: 5%;
 }
