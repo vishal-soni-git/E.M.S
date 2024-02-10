@@ -48,7 +48,7 @@
             </li>
 
             <li class="logout">
-                <a href="index.html">
+                <a href="logoutALL">
                     <i class="fas fa-sign-out-alt"> </i>
                     <span>Logout</span>
                 </a>

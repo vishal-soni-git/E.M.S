@@ -51,7 +51,7 @@
             </li>
 
             <li class="logout">
-                <a href="index.html">
+                <a href="logoutALL">
                     <i class="fas fa-sign-out-alt"> </i>
                     <span>Logout</span>
                 </a>
@@ -84,48 +84,48 @@
         <div class='content'>
             <div class='content--info'>
                  <table  class='content--table'>
+                 <br>
                      <tr>
-                         <td><%=rsmd.getColumnName(1)%></td>
-                         <td><%=rs.getString(1)%></td>
+                         <td><%=rsmd.getColumnName(1).toUpperCase()%></td>
+                         <td><%=rs.getString(1).toUpperCase()%></td>
                      </tr>
                      <tr>
-                         <td><%=rsmd.getColumnName(2)%></td>
-                         <td><%=rs.getString(2)%></td>
-                     </tr>
-
-                     <tr>
-                         <td><%=rsmd.getColumnName(3)%></td>
-                         <td><%=rs.getString(3)%></td>
+                         <td><%=rsmd.getColumnName(2).toUpperCase()%></td>
+                         <td><%=rs.getString(2).toUpperCase()%></td>
                      </tr>
 
                      <tr>
-                         <td><%=rsmd.getColumnName(4)%></td>
-                         <td><%=rs.getString(4)%></td>
+                         <td><%=rsmd.getColumnName(3).toUpperCase()%></td>
+                         <td><%=rs.getString(3).toUpperCase()%></td>
                      </tr>
 
                      <tr>
-                         <td><%=rsmd.getColumnName(5)%></td>
+                         <td><%=rsmd.getColumnName(4).toUpperCase()%></td>
+                         <td><%=rs.getString(4).toUpperCase()%></td>
+                     </tr>
+
+                     <tr>
+                         <td><%=rsmd.getColumnName(5).toUpperCase()%></td>
                          <td><%=rs.getLong(5)%></td>
                      </tr>
 
                      <tr>
-                         <td><%=rsmd.getColumnName(6)%></td>
-                         <td><%=rs.getString(6)%></td>
+                         <td><%=rsmd.getColumnName(6).toUpperCase()%></td>
+                         <td><%=rs.getString(6).toUpperCase()%></td>
                      </tr>
 
                      <tr>
-                         <td><%=rsmd.getColumnName(7)%></td>
-                         <td><%=rs.getString(7)%></td>
+                         <td><%=rsmd.getColumnName(7).toUpperCase()%></td>
+                         <td><%=rs.getString(7).toUpperCase()%></td>
                      </tr>
 
                       <tr>
-                          <td><%=rsmd.getColumnName(8)%></td>
-                          <td><%=rs.getString(8)%></td>
+                          <td><%=rsmd.getColumnName(8).toUpperCase()%></td>
+                          <td><%=rs.getString(8).toUpperCase()%></td>
                       </tr>
 
                 </table>
             </div>
-
 
              <div class='content--image'>
                        <%
@@ -144,7 +144,14 @@
              }
              %>
 
-
+            <button onclick="redirectToAnotherPage()" class='profile-password-reset'>Reset Password</button>
+            <!--javascript code-->
+            <script>
+                function redirectToAnotherPage() {
+                    // Change 'anotherPage.html' to the actual path of the page you want to open
+                    window.location.href = 'ResetPassword.html';
+                }
+            </script>
     </div>
 
 </body>

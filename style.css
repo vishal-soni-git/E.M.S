@@ -124,6 +124,7 @@ body {
     text-shadow: aqua;
 }
 
+/*profile.jsp*/
 
 .content {
 
@@ -183,6 +184,19 @@ body {
     /* Remove extra space */
     object-fit: cover;
     /* Ensure the image covers the container */
+}
+
+.profile-password-reset {
+    margin-top: 20px;
+    width: 15%;
+    padding: 10px 0px;
+    background: #070f40;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 370px;
+
 }
 
 /*leave.jsp page style*/
@@ -313,9 +327,7 @@ body {
     margin-top: 10px;
     margin-left: 250px;
     border-radius: 5px;
-    text-align: center;
     overflow: auto;
-
 }
 
 .updated-post {
@@ -325,8 +337,15 @@ body {
     margin-top: 10px;
     margin-left: 220px;
     border-radius: 5px;
-    text-align: center;
 }
+
+.updated-post p {
+    margin-left: 70px;
+    color: #faedc2;
+    font-size: 15px;
+    text-shadow: #e9f799;
+}
+
 
 .updated-post img {
     width: 70%;
@@ -337,7 +356,83 @@ body {
     /* Remove extra space */
     object-fit: cover;
     /* Ensure the image covers the container */
-    margin-top: 20px;
+    margin-top: 7px;
     margin-left: 60px;
     border-radius: 5%;
+}
+
+/*ResetPassword.html*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally (optional) */
+    justify-content: center;
+    /* Center items vertically (optional) */
+
+}
+
+.text {
+    margin-top: 30px;
+    color: #e5f1a3;
+    font-size: 40px;
+    text-align: center;
+    margin-left: 530px;
+}
+
+.resetPassword {
+    text-align: center;
+    height: 350px;
+    width: 500px;
+    background-color: #2b3990;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-left: 530px;
+}
+
+#input {
+    margin-top: 30px;
+
+    width: 250px;
+    height: 35px;
+    margin-right: 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.2s linear;
+    border: 1px solid #ccc;
+    float: right;
+}
+
+#input:hover {
+    background-color: #f0f0f0;
+    /* Change background color on hover */
+    border: 2px rgb(113, 161, 227);
+    transition: 0.2s;
+    box-shadow: 0 0 10px rgba(86, 219, 243, 0.97);
+}
+
+.bttn {
+    display: inline-block;
+    width: 60%;
+    padding: 12px 0px;
+    background: #070f40;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 40px;
+}
+
+
+.resetPasswordForm label {
+    margin-top: 30px;
+    display: inline-block;
+    width: 100px;
+    /* Adjust label width as needed */
+    text-align: left;
+    /* Align label text to the left */
+    margin-right: 10px;
+    /* Add spacing between label and input */
 }

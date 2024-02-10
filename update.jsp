@@ -48,7 +48,7 @@
             </li>
 
             <li class="logout">
-                <a href="index.html">
+                <a href="logoutALL">
                     <i class="fas fa-sign-out-alt"> </i>
                     <span>Logout</span>
                 </a>
@@ -77,13 +77,16 @@
                              ResultSet rs=ps.executeQuery();//get data in result set
                                   while(rs.next())
                                   {
+                                    String title=rs.getString(2);
                                   byte[] imageData = rs.getBytes(3);
 
                        // Convert byte array to base64 string
                        String base64Image = java.util.Base64.getEncoder().encodeToString(imageData);
                        %>
+                       <p> <%=title%></p>
                        <img src="data:image/jpeg;base64, <%= base64Image %>" alt="Database Image">
 
+                       <br><br>
                          <% } %>
                    </div>
             </div>

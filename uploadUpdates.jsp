@@ -50,7 +50,7 @@
             </li>
 
             <li class="logout">
-                <a href="index.html">
+                <a href="logoutALL">
                     <i class="fas fa-sign-out-alt"> </i>
                     <span>Logout</span>
                 </a>
@@ -81,29 +81,31 @@
              </div>
              <div class="updated-post-main">
                  <div class='updated-post'>
-                    hello
+                 <!--jsp code for getting posts.-->
                          <%@ page errorPage="error.jsp" %>
                          <%@ include file="connection.jsp"%>
                      <%
                           String id=(String)session.getAttribute("id");
-                           PreparedStatement ps=con.prepareStatement("select * from uploadpost  ORDER BY id DESC");
+                           PreparedStatement ps=con.prepareStatement("select * from uploadpost  ORDER BY id DESC LIMIT 50 ");
                            ResultSet rs=ps.executeQuery();//get data in result set
                                 while(rs.next())
                                 {
+                                    String title=rs.getString(2);
                                 byte[] imageData = rs.getBytes(3);
-    
+                                java.util.Date date=(java.util.Date)rs.getDate(4);
+
                      // Convert byte array to base64 string
                      String base64Image = java.util.Base64.getEncoder().encodeToString(imageData);
                      %>
+                    <p> <%=title%></p>
+                    <p><%=date%></p>
                      <img src="data:image/jpeg;base64, <%= base64Image %>" alt="Database Image">
-    
+                     <br><br>
                        <% } %>
+                       <!--jsp code end.-->
                  </div>
              </div>
         </div>
     </div>
-
-
 </body>
-
 </html>
